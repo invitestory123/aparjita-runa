@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/styles-MquUU_rN.css" data-precedence="default"/><link rel="stylesheet" href="external/fonts.googleapis.com/css2-048a8066a0.css" data-precedence="default"/><title>Dr. Aparajita &amp; Dr. Aabhash — Wedding Invitation</title><meta name="description" content="You are cordially invited to celebrate the Sangeet and Wedding of Dr. Aparajita Adurti &amp; Dr. Aabhash Agrawal on 20th &amp; 21st November 2026 at The Meriton, New Delhi."/><meta property="og:title" content="Dr. Aparajita &amp; Dr. Aabhash — Wedding Invitation"/><meta property="og:description" content="Join us for the wedding celebrations of Dr. Aparajita Adurti &amp; Dr. Aabhash Agrawal on 20th &amp; 21st November 2026 at The Meriton, New Delhi."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Dr. Aparajita &amp; Dr. Aabhash — Wedding Invitation"/><meta name="twitter:description" content="Join us for the wedding celebrations of Dr. Aparajita Adurti &amp; Dr. Aabhash Agrawal on 20th &amp; 21st November 2026 at The Meriton, New Delhi."/><link rel="modulepreload" href="assets/index-NkhRmeND.js"/><link rel="modulepreload" href="assets/routes-B4KIa_IW.js"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<style>
+  .music-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(30, 14, 8, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(225, 190, 120, 0.45);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5), 0 0 14px rgba(225, 190, 120, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    color: #f2cf7a;
+    outline: none;
+  }
+  .music-toggle-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 25px rgba(225, 190, 120, 0.45);
+    border-color: rgba(225, 190, 120, 0.85);
+  }
+  .music-toggle-btn:active {
+    transform: scale(0.92);
+  }
+  .music-toggle-btn.playing svg {
+    animation: music-spin 4s linear infinite;
+  }
+  .music-toggle-btn.paused {
+    opacity: 0.85;
+  }
+  .music-toggle-btn.paused::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background: #f2cf7a;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  @keyframes music-spin {
+    100% { transform: rotate(360deg); }
+  }
+</style>
+</head><body><!--$!--><template></template><!--/$--><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["assets/index-NkhRmeND.js"],scripts:$R[5]=[$R[6]={attrs:$R[7]={type:"module",async:!0,src:"assets/index-NkhRmeND.js"}}]},"index.html":$R[8]={preloads:$R[9]=["assets/routes-B4KIa_IW.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1790274695863,s:"success",ssr:!0},$R[12]={i:"  ",u:1790274695863,s:"success",ssr:!0}],lastMatchId:"  "})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script src="./editable/wedding-data.js"></script>
+<script type="module" async="" src="assets/index-NkhRmeND.js"></script>
+
+<!-- Floating Background Music Player -->
+<button id="musicToggle" type="button" aria-label="Toggle background music" class="music-toggle-btn paused" title="Play / Pause Music">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18V5l12-2v13"></path>
+    <circle cx="6" cy="18" r="3"></circle>
+    <circle cx="18" cy="16" r="3"></circle>
+  </svg>
+</button>
+<audio id="weddingBgm" src="./editable/assets/bg-music.mp3" preload="auto" loop playsinline></audio>
+
+<script>
+  (function() {
+    var audio = document.getElementById('weddingBgm');
+    var btn = document.getElementById('musicToggle');
+    if (!audio || !btn) return;
+
+    if (window.WEDDING_DATA && window.WEDDING_DATA.music && window.WEDDING_DATA.music.src) {
+      audio.src = window.WEDDING_DATA.music.src;
+    }
+
+    var isPlaying = false;
+    function updateUI(playing) {
+      isPlaying = playing;
+      if (playing) {
+        btn.classList.add('playing');
+        btn.classList.remove('paused');
+        btn.setAttribute('aria-pressed', 'true');
+      } else {
+        btn.classList.remove('playing');
+        btn.classList.add('paused');
+        btn.setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    audio.addEventListener('play', function() { updateUI(true); });
+    audio.addEventListener('playing', function() { updateUI(true); });
+    audio.addEventListener('pause', function() { updateUI(false); });
+    audio.addEventListener('ended', function() { updateUI(false); });
+
+    var unlockEvents = ['click', 'touchstart', 'touchend', 'scroll', 'keydown', 'pointerdown'];
+    function removeUnlockListeners() {
+      unlockEvents.forEach(function(evt) {
+        window.removeEventListener(evt, onGesture, true);
+        document.removeEventListener(evt, onGesture, true);
+      });
+    }
+
+    function tryPlay() {
+      if (!audio.paused && isPlaying) return;
+      audio.muted = false;
+      audio.volume = 1.0;
+      var p = audio.play();
+      if (p !== undefined) {
+        p.then(function() {
+          updateUI(true);
+          removeUnlockListeners();
+        }).catch(function(err) {
+          updateUI(false);
+        });
+      }
+    }
+
+    window.playWeddingMusic = function() {
+      tryPlay();
+    };
+
+    // Try auto-play on initial load
+    tryPlay();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', tryPlay);
+    }
+    window.addEventListener('load', tryPlay);
+
+    // Unlock on first interaction
+    function onGesture() {
+      tryPlay();
+    }
+    unlockEvents.forEach(function(evt) {
+      window.addEventListener(evt, onGesture, { capture: true, passive: true });
+      document.addEventListener(evt, onGesture, { capture: true, passive: true });
+    });
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (audio.paused) {
+        audio.play().then(function() {
+          updateUI(true);
+        }).catch(function() {});
+      } else {
+        audio.pause();
+        updateUI(false);
+      }
+    });
+  })();
+</script>
+</body></html>
