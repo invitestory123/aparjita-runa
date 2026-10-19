@@ -5,14 +5,15 @@
 
 window.WEDDING_DATA = {
   couple: {
-    groom: "Aabhash",
     bride: "Aparajita",
-    groomFull: "Dr. Aabhash Agrawal",
+    groom: "Aabhash",
     brideFull: "Dr. Aparajita Adurti",
+    groomFull: "Dr. Aabhash Agrawal",
     monogram: "A & A",
     tagline: "Two souls, one sacred celebration",
     hashtag: "#AparajitaWedsAabhash",
     slugPrefix: "aparajita-aabhash",
+    connector: "and",
   },
 
   family: {

@@ -11,11 +11,12 @@ All routine customer edits are configured in:
 
 ### Couple Details
 Edit `couple` in `editable/wedding-data.js`:
-- `groom` & `bride`: First names (`"Aabhash"`, `"Aparajita"`)
-- `groomFull` & `brideFull`: Full formal names (`"Dr. Aabhash Agrawal"`, `"Dr. Aparajita Adurti"`)
+- `bride` & `groom`: First names (`"Aparajita"`, `"Aabhash"`)
+- `brideFull` & `groomFull`: Full formal names (`"Dr. Aparajita Adurti"`, `"Dr. Aabhash Agrawal"`)
 - `monogram`: Couple initials or monogram (`"A & A"`)
 - `tagline`: Tagline subtitle
 - `hashtag`: Couple wedding hashtag (`"#AparajitaWedsAabhash"`)
+- `connector`: Hero connector between names (`"and"` or `"&"`)
 
 ### Family Details & Blessings
 Edit `family` & `wedding.blessing` in `editable/wedding-data.js`:
